@@ -31,7 +31,6 @@ mod submod {
 
 
 fn main() {
-    println!("Running");
     println!("functions: value1 = {}, value2 = {}",
         submod::a_function(),
         submod::another_func());
