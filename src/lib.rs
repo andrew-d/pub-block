@@ -27,7 +27,7 @@ pub fn plugin_registrar(registrar: &mut Registry) {
 }
 
 fn pub_block(cx: &mut ExtCtxt, _sp: codemap::Span, tts: &[ast::TokenTree]) -> Box<MacResult+'static> {
-    let mut parser = parse::new_parser_from_tts(cx.parse_sess(), cx.cfg(), Vec::from_slice(tts));
+    let mut parser = parse::new_parser_from_tts(cx.parse_sess(), cx.cfg(), tts.to_vec());
 
     let mut returned_items = vec![];
 
